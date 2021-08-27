@@ -9,7 +9,7 @@ import 'package:get/get.dart';
 import 'package:whatsapp/kontrol/controller.dart';
 import 'package:whatsapp/whatsapp_main.dart';
 
-bool _isHidden = true;
+bool _isHidden = false;
 
 class calistir extends StatefulWidget {
   const calistir({Key? key}) : super(key: key);
