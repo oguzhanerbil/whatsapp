@@ -113,13 +113,12 @@ class _RegisterState extends State<Register> {
                           ),
                         ],
                       ),
-                      child: FlatButton(
-                        color: Colors.transparent,
+                      child: InkWell(
                         hoverColor: Colors.transparent,
                         focusColor: Colors.transparent,
                         splashColor: Colors.transparent,
                         highlightColor: Colors.transparent,
-                        onPressed: () {
+                        onTap: () {
                           _authService
                               .createPerson(_editingController.text,
                                   _email.text, _Controller.text)

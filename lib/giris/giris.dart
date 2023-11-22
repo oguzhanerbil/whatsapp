@@ -31,7 +31,7 @@ class _calistirState extends State<calistir> {
     return Scaffold(
       body: Stack(children: [
         Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
                 image: ExactAssetImage("assets/image.png"),
                 fit: BoxFit.cover,
@@ -42,7 +42,7 @@ class _calistirState extends State<calistir> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "Sign In",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
               ),
@@ -143,13 +143,12 @@ class _calistirState extends State<calistir> {
                           ),
                         ],
                       ),
-                      child: FlatButton(
-                        color: Colors.transparent,
+                      child: InkWell(
                         hoverColor: Colors.transparent,
                         focusColor: Colors.transparent,
                         splashColor: Colors.transparent,
                         highlightColor: Colors.transparent,
-                        onPressed: () {
+                        onTap: () {
                           if (_editingController.text == "" ||
                               _Controller.text == "") {
                           } else {

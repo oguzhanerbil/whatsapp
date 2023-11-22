@@ -1,4 +1,3 @@
-// @dart=2.9
 import 'package:flutter/material.dart';
 import 'package:whatsapp/sayfalar/whatsapp_chats.dart';
 import 'whatsapp_main.dart';
@@ -18,7 +17,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -41,10 +40,10 @@ class MyApp extends StatelessWidget {
       title: 'WhatsApp Clone',
       theme: ThemeData(
           primaryColor: Color(0xff075e54),
-          accentColor: Color(0xff25d366),
           bottomAppBarColor: Color(0xff075e54),
-          primarySwatch: colorCustom,
-          backgroundColor: colorCustom),
+          backgroundColor: colorCustom,
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: colorCustom)
+              .copyWith(secondary: Color(0xff25d366))),
       home: calistir(),
     );
   }
